@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".CustomView_1_1">
 
-    <com.example.customview.mView_1_1.HistogramsView
+    <com.example.customview.mView_1_1.Anim_HistogramsView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
