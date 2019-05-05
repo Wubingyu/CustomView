@@ -7,8 +7,29 @@
     android:layout_height="match_parent"
     tools:context=".CustomView_1_1">
 
-    <com.example.customview.mView_1_1.Anim_HistogramsView
+<!--    <com.example.customview.mView_1_1.Anim_HistogramsView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" />-->
+
+    <TextView
+        android:id="@+id/textView1"
+        android:textSize="25dp"
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="视图动画"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:textSize="25dp"
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="属性动画"/>
+
+    <com.example.customview.mView_1_1.HisView_ObjAnim
+        android:id="@+id/hisView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
