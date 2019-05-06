@@ -8,4 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--??? 怎么感觉像是同时进行了两个动画？？-->
+    <style name="TransTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActivityTransitions">true</item>
+        
+        <item name="android:windowEnterTransition">@transition/activity_fade</item>
+        <!--<item name="android:windowExitTransition">@transition/activity_slide</item>-->
+        <item name="android:windowReturnTransition">@transition/activity_slide</item>
+    </style>
+
 </resources>

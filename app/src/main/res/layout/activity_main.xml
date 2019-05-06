@@ -13,4 +13,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:id="@+id/jump_setting"
+        android:text="设置界面"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/sync_main"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_sync_black_24dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:transitionName="@string/trans_shareName_sync"/>
+
 </LinearLayout>
