@@ -14,8 +14,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.customview.FragmentTrans.ActivityForFragment;
+
 public class MainActivity extends AppCompatActivity {
-    Button button_1_1, button_setting;
+    //好奇，java这样的传递方式之后，成员变量的数据就更新了嘛？
+    Button button_1_1, button_setting,button_fragmentTrans;
     ImageView syncView;
     private final static int NORMAL_START = 0;
     private final static int TRANS_DEFAULT_START = 1;
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         //为什么在XML中指定了转场动画(Theme)却没有用啊！ 因为启动Activity的方式要变化一下
         find_and_clickJump(button_setting, R.id.jump_setting, SettingsActivity.class, TRANS_DEFAULT_START);
         find_and_clickJump(syncView, R.id.sync_main, ShareTransition.class, TRANS_SHARE_START);
+        find_and_clickJump(button_fragmentTrans, R.id.jump_FragmentTrans, ActivityForFragment.class, NORMAL_START);
 
 
     }
@@ -94,17 +98,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent, transitionActivityOptions.toBundle());
 
         }
-    }
-
-    /**
-     * 设置transition动画
-     */
-    private void setupWindowAnimations() {
-        // inflate from xml
-//        Slide slide = TransitionInflater.from(this).inflateTransition(R.transition.activity_slide);
-        // or create directly
-        Slide slide = new Slide();
-        slide.setDuration(1000);
-        getWindow().setExitTransition(slide);
     }
 }

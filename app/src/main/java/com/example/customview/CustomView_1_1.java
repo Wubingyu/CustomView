@@ -30,8 +30,8 @@ public class CustomView_1_1 extends AppCompatActivity {
 
         textView1 = findViewById(R.id.textView1);
         textView2 = findViewById(R.id.textView2);
-        textView1.setOnClickListener(v -> setAnim());
-        textView2.setOnClickListener(v -> setAnim());
+        textView1.setOnClickListener(v -> setAnim1());
+        textView2.setOnClickListener(v -> setAnim2());
 
         hisView_objAnim = findViewById(R.id.hisView);
         hisView_objAnim.setOnClickListener(v -> objAnim());
@@ -53,15 +53,21 @@ public class CustomView_1_1 extends AppCompatActivity {
      * 直接使用android原装控件的 视图动画、属性动画
      * 使用自定义View的属性动画
      */
-    private void setAnim() {
+    private void setAnim1() {
 
         //视图动画，如何设置重复来着？
         textView1.animate().translationX(100).setDuration(500);
+    }
 
-        ObjectAnimator animator = ObjectAnimator.ofFloat(textView2, "alpha", 1, 0, 1);
-        animator.setDuration(1000);
-        animator.start();
+    private void setAnim2() {
 
+        ObjectAnimator animator1 = ObjectAnimator.ofFloat(textView2, "alpha", 1, 0, 1);
+        animator1.setDuration(2000);
+        animator1.start();
+
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(textView2, "rotation", 0f, 360f, 720f);
+        animator2.setDuration(2000);
+        animator2.start();
     }
 
     private String getColorString(int Rid) {
