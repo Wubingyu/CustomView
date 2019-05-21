@@ -14,11 +14,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.customview.CustomLayouManager.ActivityCustomLayoutManager;
 import com.example.customview.FragmentTrans.ActivityForFragment;
 
 public class MainActivity extends AppCompatActivity {
     //好奇，java这样的传递方式之后，成员变量的数据就更新了嘛？
-    Button button_1_1, button_setting,button_fragmentTrans;
+    Button button_1_1, button_setting,button_fragmentTrans,button_CustomLayoutManager;
     ImageView syncView;
     private final static int NORMAL_START = 0;
     private final static int TRANS_DEFAULT_START = 1;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         find_and_clickJump(button_setting, R.id.jump_setting, SettingsActivity.class, TRANS_DEFAULT_START);
         find_and_clickJump(syncView, R.id.sync_main, ShareTransition.class, TRANS_SHARE_START);
         find_and_clickJump(button_fragmentTrans, R.id.jump_FragmentTrans, ActivityForFragment.class, NORMAL_START);
+        find_and_clickJump(button_CustomLayoutManager, R.id.jump_CustomLayoutManager, ActivityCustomLayoutManager.class, NORMAL_START);
 
 
     }

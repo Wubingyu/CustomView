@@ -12,18 +12,12 @@
 
     <ImageView
         android:id="@+id/BlankFragment_img1"
-        android:layout_marginTop="400dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/a"
-        android:scaleType="centerCrop"
-        android:transitionName="trans"/>
-
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/FolderListFragment_RecyclerView"
+        android:layout_marginTop="200dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent"
+        android:src="@drawable/a"
+        android:scaleType="center"
+        android:transitionName="trans"/>
 
 
 
