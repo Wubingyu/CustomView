@@ -19,7 +19,7 @@ import com.example.customview.FragmentTrans.ActivityForFragment;
 
 public class MainActivity extends AppCompatActivity {
     //好奇，java这样的传递方式之后，成员变量的数据就更新了嘛？
-    Button button_1_1, button_setting,button_fragmentTrans,button_CustomLayoutManager;
+    Button button_1_1, button_setting,button_fragmentTrans,button_CustomLayoutManager, button_openAlbum;
     ImageView syncView;
     private final static int NORMAL_START = 0;
     private final static int TRANS_DEFAULT_START = 1;
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         find_and_clickJump(syncView, R.id.sync_main, ShareTransition.class, TRANS_SHARE_START);
         find_and_clickJump(button_fragmentTrans, R.id.jump_FragmentTrans, ActivityForFragment.class, NORMAL_START);
         find_and_clickJump(button_CustomLayoutManager, R.id.jump_CustomLayoutManager, ActivityCustomLayoutManager.class, NORMAL_START);
+        find_and_clickJump(button_openAlbum, R.id.jump_openAlbum, OpenAlbumActivity.class, NORMAL_START);
 
 
     }
